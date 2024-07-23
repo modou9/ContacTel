@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContacTel</title>
+    <link rel="stylesheet" href="lib/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="lib/themes/contact.min.css">
+    <link rel="stylesheet" href="lib/themes/jquery.mobile.icons.min.css">
+    <link rel="stylesheet" href="lib/jquery.mobile.structure-1.4.5.min.css">
+    <link src="css/index.css">
+
+    <script src="cordova.js"></script>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+
+    <!--
+        homepage
+                -->
+    <div data-role="page" id="homepage">
+        <div data-role="header">
+            <h1 id="title">ContacTel</h1>
+        </div>
+        <div>
+            <a href="#addcontactpage" data-transition="slidedown" data-role="button" data-icon="plus" data-iconpos="notext-right">Ajouter</a>
+            <ul id="contacList" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Recherche contact" >
+                <!---   <li>
+                    <a href="#">
+                        <img src="img/contact.jpg" alt=" ">
+                    <h2>Modou MBENGUE</h2>
+                    <P>78 218 64 50</P>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/contact.jpg" alt=" ">
+                    <h2>Adama DIAW</h2>
+                    <P>75 218 64 50</P>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/contact.jpg" alt=" ">
+                    <h2>Modou FALL</h2>
+                    <P>70 218 64 50</P>
+                    </a>
+                </li><li>
+                    <a href="#">
+                        <img src="img/contact.jpg" alt=" ">
+                    <h2>Khady MBENGUE</h2>
+                    <P>77 218 66 50</P>
+                    </a>
+                </li> -->
+
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1>M1ia &copy; 2024</h1>
+        </div>
+    </div>
+
+
+    <!-- 
+        add contact
+         -->
+    <div data-role="page" id="addcontactpage">
+        <div data-role="header">
+            <h1>ContacTel</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <a href="#homepage" data-transition="slideup" data-role="button" data-icon="home" data-iconpos="notext">home</a>
+            <form id="addcontactform">
+                <label for="nom">Nom</label>
+                <input value="" type="text" name="nom">
+                <label for="prenom">Prenom</label>
+                <input value="" type="text" name="prenom">
+                <label for="address">Adresse</label>
+                <input value="" type="text" name="address">
+                <label for="numero">Numero</label>
+                <input value="" type="number" name="numero" min="111111111" required>
+                <button data-role="button" id="button-add" style="background-color: blue; color: white;">Ajouter</button>
+            </form>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1>M1ia &copy; 2024</h1>
+        </div>
+    </div>
+
+       <!-- 
+        contact détails
+         -->
+    <div data-role="page" id="detailscontactpage">
+        <div data-role="header">
+            <h1>ContacTel</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <a href="#homepage" data-transition="pop" data-role="button" data-icon="home" data-iconpos="notext">home</a>
+            <img src="img/contacts.jpeg" width="200">
+            <form id="detailcontactform">
+                <label for="nom">Nom</label>
+                <input type="text" name="nom">
+                <label for="prenom">Prenom</label>
+                <input type="text" name="prenom">
+                <label for="address">Adresse</label>
+                <input type="text" name="address">
+                <label for="numero">Numero</label>
+                <input type="number" name="numero" min="111111111">
+                <button data-role="button" data-iconpos="right" id="buton-update" style="background-color: blue; color: white;">Edit</button>
+            </form>
+            <button data-role="button" data-iconpos="left" id="buton-delete" style="background-color: red; color: white;">Delete</button>
+        </div>
+        
+        <div data-role="footer" data-position="fixed">
+            <h1>M1ia &copy; 2024</h1>
+        </div>
+    </div>
+
+    
+</body>
+</html>
